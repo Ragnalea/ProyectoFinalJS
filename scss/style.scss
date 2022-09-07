@@ -1,0 +1,11 @@
+@import "_variables";
+@import "_header";
+@import "_main";
+@import "_footer";
+
+.centrar {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    align-items: center;
+}

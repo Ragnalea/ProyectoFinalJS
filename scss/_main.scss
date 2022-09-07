@@ -1,0 +1,19 @@
+main {
+    background-color: $maincolor;
+}
+.titcolor {
+    font-size: 75px;
+    color: rgb(80, 40, 11);
+    padding: 30px;
+    display: flex;
+    justify-content: center ;
+    text-decoration-line: underline;
+    font-style: italic;
+}
+
+img {
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+*{flex-wrap: wrap;}

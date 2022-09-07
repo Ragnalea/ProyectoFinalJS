@@ -1,0 +1,75 @@
+header {
+    background-color: $bgcolor;
+}
+.navbar {
+    font-weight: bold;
+}
+.menuhamb {
+    opacity: 100;
+}
+
+.navbar-collapse {
+    flex-basis: 100%;
+    flex-grow: 0;
+    align-items: center;
+}
+
+.hamburguesa {
+    display: flex;
+    justify-content: end !important;
+}
+
+.imglogo {
+    height: 125px;
+    padding: 0%;
+    margin: 0%;
+}
+.menuhamb {
+    display: flex;
+    justify-content: center;
+}
+.hamburguesa {
+    display: flex;
+    justify-content: end !important;
+}
+.busqueda {
+    height: 35px;
+    display: flex;
+    align-self: center;
+}
+
+@media only screen and (max-width: 768px) {
+    .fixedt {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .menuhamb {
+        background-color: rosybrown;
+        opacity: 0.75!important;
+    }
+
+    .busqueda {
+        margin-bottom: 10px;
+    }
+
+    .imgindex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .imglogo {
+        height: 90px;
+        padding: 0%;
+        margin: 0%;
+    }
+
+    .titcolor {
+        font-size: 50px !important;
+    }
+    
+    }
