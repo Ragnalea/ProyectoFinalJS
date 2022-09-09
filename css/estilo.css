@@ -1,3 +1,23 @@
+.w-1 {
+  width: 100px; }
+
+.w-2 {
+  width: 200px; }
+
+.w-3 {
+  width: 300px; }
+
+.w-4 {
+  width: 400px; }
+
+.w-5 {
+  width: 500px; }
+
+.box {
+  height: 600px;
+  width: 600px;
+  padding-bottom: 15px; }
+
 header {
   background-color: rgba(210, 180, 140, 0.645); }
 
@@ -55,10 +75,11 @@ header {
     padding: 0%;
     margin: 0%; }
   .titcolor {
-    font-size: 50px !important; } }
+    font-size: 30px !important; } }
 
 main {
-  background-color: burlywood; }
+  background-color: burlywood;
+  padding-bottom: 20px; }
 
 .titcolor {
   font-size: 75px;
@@ -73,18 +94,65 @@ img {
   padding: 10px;
   margin-bottom: 5px; }
 
-* {
-  flex-wrap: wrap; }
+.tablecss {
+  text-align: center;
+  border-collapse: separate;
+  border-color: black; }
+  .tablecss thead tr th {
+    background-color: gray;
+    color: black;
+    font-size: 1.3rem; }
+  .tablecss > thead,
+  .tablecss > tbody {
+    border-width: 10px !important; }
+    .tablecss > thead > tr:hover,
+    .tablecss > tbody > tr:hover {
+      background-color: aquamarine; }
+    .tablecss > thead > tr th,
+    .tablecss > thead > tr td,
+    .tablecss > tbody > tr th,
+    .tablecss > tbody > tr td {
+      padding: 10px; }
+
+.table {
+  width: 50%; }
+
+.detpro {
+  justify-content: flex-end !important; }
+
+.detallespro {
+  justify-content: flex-start !important; }
+
+.estructuraform,
+.estructuraform2 {
+  font-size: 25px;
+  font-family: 'Times New Roman', Times, serif;
+  color: black;
+  padding: 10px;
+  width: 10%; }
+
+.textbox {
+  margin-bottom: 15px;
+  height: 40px;
+  width: 300px; }
+
+@media only screen and (max-width: 768px) {
+  .detpro {
+    justify-content: center !important; }
+  .detallespro {
+    justify-content: center !important; } }
 
 footer {
   background-color: rgba(210, 180, 140, 0.645); }
 
 .footimg {
-  height: 75px;
-  width: 200px; }
+  height: 75px; }
 
 .centrar {
   display: flex;
   justify-content: center;
   list-style: none;
   align-items: center; }
+
+* {
+  flex-wrap: wrap; }

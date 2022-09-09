@@ -1,2 +1,20 @@
 $bgcolor:rgba(210, 180, 140, 0.645);
 $maincolor: burlywood;
+$letras: black;
+$fondo: gray;
+$suave:aquamarine;
+
+@for $wit from 1 through 5 {
+    .w-#{$wit}{
+        width: 100px * $wit;
+    }
+}
+
+@mixin altura ($width, $height, $padb){
+    height: $height;
+    width: $width;
+    padding-bottom: $padb;
+}
+.box{
+    @include altura(600px,600px,15px)
+}
