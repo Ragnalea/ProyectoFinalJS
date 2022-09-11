@@ -24,29 +24,31 @@
   list-style: none;
   align-items: center; }
 
+.titulo, .titcolor {
+  font-size: 75px;
+  padding: 25px;
+  display: flex;
+  justify-content: center;
+  text-decoration-line: underline; }
+
 header {
-  background-color: rgba(210, 180, 140, 0.645); }
+  background-color: #efcd9f; }
 
 .navbar {
-  background-color: rgba(210, 180, 140, 0.645) !important; }
+  background-color: #efcd9f !important; }
 
 .imglogo {
   height: 125px;
   padding: 0%;
   margin: 0%; }
 
+.titcolor {
+  color: #50280b !important;
+  font-style: italic; }
+
 @media only screen and (max-width: 768px) {
-  .navbar {
-    z-index: 1030; }
-  .menuhamb {
-    background-color: rosybrown;
-    opacity: 0.75 !important; }
   .busqueda {
     margin-bottom: 10px; }
-  .imgindex {
-    display: flex;
-    justify-content: center;
-    align-items: center; }
   .imglogo {
     height: 90px;
     padding: 0%;
@@ -59,12 +61,7 @@ main {
   padding-bottom: 20px; }
 
 .titcolor {
-  font-size: 75px;
-  color: #50280b;
-  padding: 25px;
-  display: flex;
-  justify-content: center;
-  text-decoration-line: underline;
+  color: #50280b !important;
   font-style: italic; }
 
 img {
@@ -91,6 +88,9 @@ img {
     .tablecss > tbody > tr td {
       padding: 10px; }
 
+h3 {
+  font-size: 45px; }
+
 .table {
   width: 50%; }
 
@@ -113,6 +113,9 @@ img {
   height: 40px;
   width: 300px; }
 
+.imgindex {
+  justify-content: flex-start !important; }
+
 @media only screen and (max-width: 768px) {
   .detpro {
     justify-content: center !important; }
@@ -122,7 +125,7 @@ img {
     height: 80px; } }
 
 footer {
-  background-color: rgba(210, 180, 140, 0.645); }
+  background-color: #efcd9f; }
 
 .footimg {
   height: 75px; }

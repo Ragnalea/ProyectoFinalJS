@@ -1,5 +1,5 @@
 footer {
-    background-color: $bgcolor;
+    background-color: map-get($paletascolores, bgcolor);
 }
 
 .footimg {

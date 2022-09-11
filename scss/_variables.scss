@@ -1,8 +1,11 @@
-$bgcolor: rgba(210, 180, 140, 0.645);
-$maincolor: burlywood;
-$letras: black;
-$fondo: gray;
-$suave: aquamarine;
+$paletascolores: (
+    bgcolor:rgb(239, 205, 159),
+    maincolor: burlywood,
+    letras: black,
+    fondo: gray,
+    suave: aquamarine,
+    titulo:rgb(80, 40, 11)
+);
 
 @for $wit from 1 through 5 {
     .w-#{$wit} {
@@ -31,3 +34,10 @@ $suave: aquamarine;
     @include flex-center-none-items;
 }
 
+.titulo {
+    font-size: 75px;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    text-decoration-line: underline;
+}

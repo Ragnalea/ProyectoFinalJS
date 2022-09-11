@@ -1,9 +1,9 @@
 header {
-    background-color: $bgcolor;
+    background-color: map-get($paletascolores, bgcolor);
 }
 
 .navbar {
-    background-color: $bgcolor !important;
+    background-color: map-get($paletascolores, bgcolor) !important;
 }
 
 .imglogo {
@@ -12,24 +12,16 @@ header {
     margin: 0%;
 }
 
-@media only screen and (max-width: 768px) {
-    .navbar {
-        z-index: 1030;
-    }
+.titcolor{
+@extend .titulo;
+color: map-get($paletascolores, titulo) !important;
+font-style: italic;
+}
 
-    .menuhamb {
-        background-color: rosybrown;
-        opacity: 0.75 !important;
-    }
+@media only screen and (max-width: 768px) {
 
     .busqueda {
         margin-bottom: 10px;
-    }
-
-    .imgindex {
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
 
     .imglogo {

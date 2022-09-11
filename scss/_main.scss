@@ -1,15 +1,11 @@
 main {
-    background-color: $maincolor;
+    background-color: map-get($paletascolores, maincolor);
     padding-bottom: 20px;
 }
 
 .titcolor {
-    font-size: 75px;
-    color: rgb(80, 40, 11);
-    padding: 25px;
-    display: flex;
-    justify-content: center;
-    text-decoration-line: underline;
+    @extend .titulo;
+    color: map-get($paletascolores, titulo) !important;
     font-style: italic;
 }
 
@@ -21,11 +17,11 @@ img {
 .tablecss {
     text-align: center;
     border-collapse: separate;
-    border-color: $letras;
+    border-color: map-get($paletascolores, letras);
 
     thead tr th {
-        background-color: $fondo;
-        color: $letras;
+        background-color: map-get($paletascolores, fondo);
+        color: map-get($paletascolores, letras);
         font-size: 1.3rem;
     }
 
@@ -35,7 +31,7 @@ img {
 
         >tr {
             &:hover {
-                background-color: $suave;
+                background-color: map-get($paletascolores, suave);
             }
 
             th,
@@ -44,6 +40,10 @@ img {
             }
         }
     }
+}
+
+h3 {
+    font-size: 45px;
 }
 
 .table {
@@ -66,10 +66,15 @@ img {
     padding: 10px;
     width: 10%;
 }
+
 .textbox {
     margin-bottom: 15px;
     height: 40px;
     width: 300px;
+}
+
+.imgindex {
+    justify-content: flex-start !important;
 }
 
 @media only screen and (max-width: 768px) {
