@@ -15,37 +15,39 @@
 <body>
     <div class="container-fluid">
         <header class="row">
-            <div class="col-8 col-lg-4 logoempresa centrar">
+            <div class="col-12 col-lg-4 logoempresa centrar">
                 <a href="../index.html"> <img src="../assets/img/logo.png" alt="logo empresa" class="imglogo"></a>
             </div>
-            <nav class="navbar navbar-expand-lg navbar-light col-4 col-lg-6">
-                <div class="container-fluid hamburguesa fixedt">
-                    <button class="navbar-toggler hambpos" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false"
-                        aria-label="Toggle navigation">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light col-12 col-lg-8 centrar">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse opacity-100" id="navbarTogglerDemo03">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-end menuhamb ">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="productos.html">Productos</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link disabled" href="nosotros.html">Nosotros</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="registro.html">Iniciar Sesion</a>
-                            </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="productos.html">Productos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link disabled" href="nosotros.html">Nosotros</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="registro.html">Iniciar Sesion</a>
+                                </li>
                         </ul>
+                        <form class="d-flex">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
                     </div>
                 </div>
             </nav>
-            <form class="d-flex col-12 col-lg-2">
-                <input class="form-control me-2 busqueda" type="search" placeholder="Search" aria-label="Search">
-            </form>
         </header>
         <main class="row">
             <div>
@@ -79,17 +81,17 @@
             <div class="col-12 col-lg-12 minititulo centrar">
                 <h2 data-aos="flip-left"> Pueden contactarnos por:</h2>
             </div>
-            <div data-aos="zoom-in" class="redes col-12 col-lg-4 centrar">
+            <div data-aos="zoom-in" class="redes col-4 col-lg-4 centrar">
                 <a href="https://www.facebook.com/amoblamientoslaesperanza" target="_blank">
-                    <img src="../assets/img/fblogo.png" alt="facebook"></a>
+                    <img src="../assets/img/fblogo.png" alt="facebook" class="redes"></a>
             </div>
-            <div data-aos="zoom-in" class="redes col-12 col-lg-4 centrar">
+            <div data-aos="zoom-in" class="redes col-4 col-lg-4 centrar">
                 <a href="https://www.instagram.com/laesperanzaamoblamientosok/" target="_blank">
-                    <img src="../assets/img/iglogo.png" alt="instagram"></a>
+                    <img src="../assets/img/iglogo.png" alt="instagram" class="redes"></a>
             </div>
-            <div data-aos="zoom-in" class="redes col-12 col-lg-4 centrar">
-                <a href="https://wa.me/c/5493364311130" target="_blank"><img src="../assets/img/wsplogo.png"
-                        alt="whatsapp"></a>
+            <div data-aos="zoom-in" class="col-4 col-lg-4 centrar">
+                <a href="https://wa.me/c/5493364311130" target="_blank">
+                    <img src="../assets/img/wsplogo.png" alt="whatsapp" class="redes"></a>
             </div>
         </main>
         <footer class="row">

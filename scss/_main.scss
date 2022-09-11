@@ -6,7 +6,7 @@ main {
 .titcolor {
     font-size: 75px;
     color: rgb(80, 40, 11);
-    padding: 30px;
+    padding: 25px;
     display: flex;
     justify-content: center;
     text-decoration-line: underline;
@@ -79,5 +79,9 @@ img {
 
     .detallespro {
         justify-content: center !important;
+    }
+
+    .redes {
+        height: 80px;
     }
 }

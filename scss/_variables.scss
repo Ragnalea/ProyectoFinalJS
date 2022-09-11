@@ -1,20 +1,33 @@
-$bgcolor:rgba(210, 180, 140, 0.645);
+$bgcolor: rgba(210, 180, 140, 0.645);
 $maincolor: burlywood;
 $letras: black;
 $fondo: gray;
-$suave:aquamarine;
+$suave: aquamarine;
 
 @for $wit from 1 through 5 {
-    .w-#{$wit}{
+    .w-#{$wit} {
         width: 100px * $wit;
     }
 }
 
-@mixin altura ($width, $height, $padb){
+@mixin altura ($width, $height, $padb) {
     height: $height;
     width: $width;
     padding-bottom: $padb;
 }
-.box{
-    @include altura(600px,600px,15px)
+
+.box {
+    @include altura(600px, 600px, 15px)
 }
+
+@mixin flex-center-none-items {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    align-items: center;
+}
+
+.centrar {
+    @include flex-center-none-items;
+}
+

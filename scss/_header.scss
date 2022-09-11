@@ -1,22 +1,9 @@
 header {
     background-color: $bgcolor;
 }
+
 .navbar {
-    font-weight: bold;
-}
-.menuhamb {
-    opacity: 100;
-}
-
-.navbar-collapse {
-    flex-basis: 100%;
-    flex-grow: 0;
-    align-items: center;
-}
-
-.hamburguesa {
-    display: flex;
-    justify-content: end !important;
+    background-color: $bgcolor !important;
 }
 
 .imglogo {
@@ -24,32 +11,15 @@ header {
     padding: 0%;
     margin: 0%;
 }
-.menuhamb {
-    display: flex;
-    justify-content: center;
-}
-.hamburguesa {
-    display: flex;
-    justify-content: end !important;
-}
-.busqueda {
-    height: 35px;
-    display: flex;
-    align-self: center;
-}
 
 @media only screen and (max-width: 768px) {
-    .fixedt {
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
+    .navbar {
         z-index: 1030;
     }
 
     .menuhamb {
         background-color: rosybrown;
-        opacity: 0.75!important;
+        opacity: 0.75 !important;
     }
 
     .busqueda {
@@ -71,5 +41,5 @@ header {
     .titcolor {
         font-size: 30px !important;
     }
-    
-    }
+
+}

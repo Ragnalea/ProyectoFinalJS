@@ -18,48 +18,25 @@
   width: 600px;
   padding-bottom: 15px; }
 
+.centrar {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  align-items: center; }
+
 header {
   background-color: rgba(210, 180, 140, 0.645); }
 
 .navbar {
-  font-weight: bold; }
-
-.menuhamb {
-  opacity: 100; }
-
-.navbar-collapse {
-  flex-basis: 100%;
-  flex-grow: 0;
-  align-items: center; }
-
-.hamburguesa {
-  display: flex;
-  justify-content: end !important; }
+  background-color: rgba(210, 180, 140, 0.645) !important; }
 
 .imglogo {
   height: 125px;
   padding: 0%;
   margin: 0%; }
 
-.menuhamb {
-  display: flex;
-  justify-content: center; }
-
-.hamburguesa {
-  display: flex;
-  justify-content: end !important; }
-
-.busqueda {
-  height: 35px;
-  display: flex;
-  align-self: center; }
-
 @media only screen and (max-width: 768px) {
-  .fixedt {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
+  .navbar {
     z-index: 1030; }
   .menuhamb {
     background-color: rosybrown;
@@ -84,7 +61,7 @@ main {
 .titcolor {
   font-size: 75px;
   color: #50280b;
-  padding: 30px;
+  padding: 25px;
   display: flex;
   justify-content: center;
   text-decoration-line: underline;
@@ -140,19 +117,15 @@ img {
   .detpro {
     justify-content: center !important; }
   .detallespro {
-    justify-content: center !important; } }
+    justify-content: center !important; }
+  .redes {
+    height: 80px; } }
 
 footer {
   background-color: rgba(210, 180, 140, 0.645); }
 
 .footimg {
   height: 75px; }
-
-.centrar {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  align-items: center; }
 
 * {
   flex-wrap: wrap; }
