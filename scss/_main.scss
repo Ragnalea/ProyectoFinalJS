@@ -1,6 +1,6 @@
 main {
-    background-color: map-get($paletascolores, maincolor);
     padding-bottom: 20px;
+    background: url("../assets/img/fondodesk.jpg");
 }
 
 .titcolor {
@@ -10,7 +10,7 @@ main {
     text-decoration-line: underline;
 }
 
-h2{
+h2 {
     @extend .titulo;
     font-size: 50px;
     font-family: 'Courier New';
@@ -83,13 +83,15 @@ h3 {
 }
 
 .imgindex {
-    justify-content: flex-start !important;
+    justify-content: space-around;
 }
+
 
 @media only screen and (max-width: 768px) {
     main {
-        background-image: url("fondocelu.jpg");
+        background: url("../assets/img/fondocelu.jpg");
     }
+
     .detpro {
         justify-content: center !important;
     }
@@ -101,8 +103,8 @@ h3 {
     .redes {
         height: 80px;
     }
-    
-    h2{
+
+    h2 {
         font-size: 25px !important;
     }
 }

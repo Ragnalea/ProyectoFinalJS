@@ -68,8 +68,8 @@ nav ul {
     margin-left: 8px; } }
 
 main {
-  background-color: burlywood;
-  padding-bottom: 20px; }
+  padding-bottom: 20px;
+  background: url("../assets/img/fondodesk.jpg"); }
 
 .titcolor {
   color: #50280b !important;
@@ -132,11 +132,11 @@ h3 {
   width: 300px; }
 
 .imgindex {
-  justify-content: flex-start !important; }
+  justify-content: space-around; }
 
 @media only screen and (max-width: 768px) {
   main {
-    background-image: url("fondocelu.jpg"); }
+    background: url("../assets/img/fondocelu.jpg"); }
   .detpro {
     justify-content: center !important; }
   .detallespro {
