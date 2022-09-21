@@ -7,6 +7,15 @@ main {
     @extend .titulo;
     color: map-get($paletascolores, titulo) !important;
     font-style: italic;
+    text-decoration-line: underline;
+}
+
+h2{
+    @extend .titulo;
+    font-size: 50px;
+    font-family: 'Courier New';
+    justify-content: flex-start;
+    color: map-get($paletascolores, titulo)
 }
 
 img {
@@ -78,6 +87,9 @@ h3 {
 }
 
 @media only screen and (max-width: 768px) {
+    main {
+        background-image: url("fondocelu.jpg");
+    }
     .detpro {
         justify-content: center !important;
     }
@@ -88,5 +100,9 @@ h3 {
 
     .redes {
         height: 80px;
+    }
+    
+    h2{
+        font-size: 25px !important;
     }
 }

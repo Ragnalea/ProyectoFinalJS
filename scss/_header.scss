@@ -2,36 +2,54 @@ header {
     background-color: map-get($paletascolores, bgcolor);
 }
 
-.navbar {
-    background-color: map-get($paletascolores, bgcolor) !important;
-}
-
 .imglogo {
     height: 125px;
     padding: 0%;
     margin: 0%;
 }
 
-.titcolor{
-@extend .titulo;
-color: map-get($paletascolores, titulo) !important;
-font-style: italic;
+.barra {
+    align-self: center
+}
+
+nav {
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        li {
+            list-style: none;
+            justify-content: space-between;
+            font-family: 'Times New Roman';
+            padding: 15px;
+        }
+    }
+}
+
+.titcolor {
+    @extend .titulo;
+    color: map-get($paletascolores, titulo) !important;
+    font-style: italic;
 }
 
 @media only screen and (max-width: 768px) {
 
-    .busqueda {
-        margin-bottom: 10px;
-    }
-
     .imglogo {
         height: 90px;
-        padding: 0%;
-        margin: 0%;
     }
 
     .titcolor {
         font-size: 30px !important;
     }
 
+    nav ul li {
+        padding: 1%;
+    }
+
+    .textbox {
+        width: 289px !important;
+        margin-left: 8px;
+    }
 }

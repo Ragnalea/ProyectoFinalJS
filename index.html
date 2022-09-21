@@ -6,82 +6,75 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Compra de muebles para tu hogar en San Nicolas de los Arroyos">
-    <meta name="keywords" content="Imagenes de los muebles, muebles para la casa, San Nicolas de los Arroyos, compra de muebles, organizar tu hogar">
+    <meta name="keywords"
+        content="Imagenes de los muebles, muebles para la casa, San Nicolas de los Arroyos, compra de muebles, organizar tu hogar">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>La Esperanza Amoblamientos</title>
     <link rel="stylesheet" href="css/estilo.css">
+    <link rel="icon" href="assets/img/logo.png">
 </head>
 
 <body>
-    <div class="container-fluid">
-        <header class="row">
-            <div class="col-12 col-lg-4 logoempresa centrar">
+    <div class="gridprincipal">
+        <header class="gridheader">
+            <div class="logoempresa centrar">
                 <a href="index.html"> <img src="assets/img/logo.png" alt="logo empresa" class="imglogo"></a>
             </div>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light col-12 col-lg-8 centrar">
-                <div class="container-fluid">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <li class="nav-item">
-                                    <a class="nav-link disabled" aria-current="page" href="index.html">Inicio</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="pages/productos.html">Productos</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="pages/nosotros.html">Nosotros</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="pages/registro.html">Iniciar Sesion</a>
-                                </li>
-                        </ul>
-                        <form class="d-flex">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-outline-success" type="submit">Search</button>
-                        </form>
-                    </div>
-                </div>
+            <div class="barra">
+                <input type="search" placeholder="Busqueda" name="search" class="textbox">
+                <input type="reset" value="Buscar" class="botonreg">
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="pages/productos.html">Productos</a></li>
+                    <li><a href="pages/nosotros.html">Nosotros</a></li>
+                    <li><a href="pages/registro.html">Mi Cuenta</a></li>
+                </ul>
             </nav>
         </header>
-        <main class="row">
+        <main>
             <div>
-                <h1 data-aos="zoom-in-down" class="col-12 col-lg-12 titcolor centrar"> Lleva la comodidad a tu hogar
-                </h1>
+                <h1 data-aos="zoom-in-down" class="titcolor centrar"> Lleva la comodidad a tu hogar</h1>
+            </div>
+            <div>
+                <h2 data-aos="zoom-in-down"> Oferta!</h2>
             </div>
             <div data-aos="zoom-in" class="imgindex centrar">
-                <img src="assets/img/esquinero.jpg" alt="esquinero">
-                <img src="assets/img/desayunador.jpg" alt="desayunador">
+                <a href="pages/detalle.html"><img src="assets/img/cartel.jpg" alt="cartel"></a>
                 <img src="assets/img/ropero.jpg" alt="ropero">
+                <img src="assets/img/esquinero.jpg" alt="esquinero">
+            </div>
+            <div>
+                <h2 data-aos="zoom-in-down"> Lo mas vendido</h2>
+            </div>
+            <div data-aos="zoom-in" class="imgindex centrar">
+                <img src="assets/img/desayunador.jpg" alt="desayunador">
                 <img src="assets/img/botinero.jpg" alt="botinero">
-                <a href="pages/detalle.html"><img src="assets/img/cartel.jpg"alt="cartel"></a>
                 <img src="assets/img/vestidor.jpg" alt="vestidor">
+            </div>
+            <div>
+                <h2 data-aos="zoom-in-down"> Nuevos ingresos</h2>
+            </div>
+            <div data-aos="zoom-in" class="imgindex centrar">
                 <img src="assets/img/bahiut.jpg" alt="baihut">
                 <img src="assets/img/comodon.jpg" alt="comodon">
                 <img src="assets/img/verdulero.jpg" alt="verduleros">
             </div>
         </main>
-        <footer class="row">
-            <div class="col-12 col-lg-4 centrar">
+        <footer class="gridfooter">
+            <div class="centrar">
                 <a href="index.html"> <img src="assets/img/logo.png" alt="logo empresa" class="footimg"></a>
             </div>
-            <div class="col-12 col-lg-4 centrar">
+            <div class="centrar">
                 <img src="assets/img/telefono2.png" alt="telefono" class="footimg">
             </div>
-            <div class="col-12 col-lg-4 centrar">
+            <div class="centrar">
                 <img src="assets/img/tarjetas.png" alt="tarjetas" class="footimg">
             </div>
         </footer>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-            crossorigin="anonymous"></script>
     </div>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>

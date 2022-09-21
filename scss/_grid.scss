@@ -1,0 +1,102 @@
+.gridprincipal {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "main main main"
+        "footer footer footer";
+    grid-template-columns: 33% 33% 34%;
+    grid-template-rows: auto auto auto;
+}
+
+header {
+    grid-area: header;
+}
+
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+}
+
+.gridheader {
+    display: grid;
+    grid-template-areas:
+        "logoh busqueda nav";
+    grid-template-columns: 33% 34% 33%;
+    grid-template-rows: auto;
+}
+
+.gridfooter {
+    display: grid;
+    grid-template-areas:
+        "logof horario tarjeta";
+    grid-template-columns: 33% 34% 33%;
+    grid-template-rows: auto;
+}
+
+.logoempresa {
+    grid-area: logoh;
+}
+
+.barra {
+    grid-area: busqueda;
+}
+
+.nav {
+    grid-area: nav;
+}
+
+@media only screen and (max-width: 768px) {
+    .gridprincipal {
+        display: grid;
+        grid-template-areas:
+            "header"
+            "header"
+            "header"
+            "main"
+            "main"
+            "main"
+            "main"
+            "main"
+            "main"
+            "main"
+            "main"
+            "main"
+            "main"
+            "main"
+            "footer"
+            "footer"
+            "footer";
+        grid-template-columns: 100%;
+        grid-template-rows: repeat 17(auto);
+    }
+
+    header {
+        grid-area: header;
+    }
+
+    .gridheader {
+        display: grid;
+        grid-template-areas:
+            "logoh"
+            "busqueda" 
+            "nav";
+        grid-template-columns: 100%;
+    }
+
+    main {
+        grid-area: main;
+    }
+
+    footer {
+        grid-area: footer;
+    }
+    .nav {
+        grid-area: nav;
+        display: flex;
+        flex-direction: row;
+        padding: 0%;
+    }
+}
