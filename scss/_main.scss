@@ -1,6 +1,6 @@
 main {
     padding-bottom: 20px;
-    background: url("../assets/img/fondodesk.jpg");
+    background: map-get($paletascolores , maincolor);
 }
 
 .titcolor {
@@ -64,7 +64,9 @@ h3 {
 }
 
 .detallespro {
-    justify-content: flex-start !important;
+    display: flex;
+    justify-content: center;
+    font-size: 21px;
 }
 
 .estructuraform,
@@ -76,20 +78,37 @@ h3 {
     width: 10%;
 }
 
-.textbox {
-    margin-bottom: 15px;
-    height: 40px;
-    width: 300px;
-}
-
 .imgindex {
     justify-content: space-around;
 }
 
+.bueno {
+    color: green;
+}
+
+.malo {
+    color: orangered;
+}
+
+.botonreg {
+    background-color: gray;
+    align-self: center;
+    width: 89px;
+    height: 40px;
+    margin-top: 65px;
+}
+
+.recomendacion{
+    margin-top: 75px;
+}
+
+p{
+    font-size: 30px;
+}
 
 @media only screen and (max-width: 768px) {
     main {
-        background: url("../assets/img/fondocelu.jpg");
+        background: map-get($paletascolores , maincolor);
     }
 
     .detpro {
@@ -106,5 +125,25 @@ h3 {
 
     h2 {
         font-size: 25px !important;
+    }
+
+    .botonreg {
+        background-color: gray;
+        align-self: center;
+        width: 170px;
+        height: 40px;
+        margin-top: 65px;
+    }
+
+    .recomendacion{
+        font-size: 40px;
+    }
+
+    .video{
+        height: 355px;
+    }
+
+    p{
+        font-size: 15px !important;
     }
 }

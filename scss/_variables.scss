@@ -7,12 +7,6 @@ $paletascolores: (
     titulo:rgb(80, 40, 11)
 );
 
-@for $wit from 1 through 5 {
-    .w-#{$wit} {
-        width: 100px * $wit;
-    }
-}
-
 @mixin altura ($width, $height, $padb) {
     height: $height;
     width: $width;

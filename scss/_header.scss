@@ -12,12 +12,26 @@ header {
     align-self: center
 }
 
+.botonbus{
+    background-color: gray;
+    width: 70px;
+    height: 43px;
+    align-self: flex-start;
+}
+
+.textbox{
+    margin-bottom: 15px;
+    height: 43px;
+    width: 450px;
+}
 nav {
+    display: flex;
+    width: 100%;
     ul {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        align-items: flex-end;
+        align-items: center;
 
         li {
             list-style: none;
@@ -51,5 +65,13 @@ nav {
     .textbox {
         width: 289px !important;
         margin-left: 8px;
+    }
+
+    .botonbus{
+        background-color: gray;
+        width: 70px;
+        height: 32px;
+        margin-bottom: 25px;
+        align-self: flex-start;
     }
 }

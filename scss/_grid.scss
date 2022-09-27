@@ -46,6 +46,7 @@ footer {
 
 .nav {
     grid-area: nav;
+
 }
 
 @media only screen and (max-width: 768px) {
@@ -70,11 +71,12 @@ footer {
             "footer"
             "footer";
         grid-template-columns: 100%;
-        grid-template-rows: repeat 17(auto);
+        grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
     }
 
     header {
         grid-area: header;
+        width: 100%;
     }
 
     .gridheader {
@@ -84,6 +86,7 @@ footer {
             "busqueda" 
             "nav";
         grid-template-columns: 100%;
+        grid-template-rows: auto auto auto;
     }
 
     main {
@@ -93,10 +96,26 @@ footer {
     footer {
         grid-area: footer;
     }
+
     .nav {
         grid-area: nav;
-        display: flex;
-        flex-direction: row;
         padding: 0%;
+        width: 100% !important;
+        ul{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly !important;
+            width: 100%;
+        }
+    }
+
+    .gridfooter {
+        display: grid;
+        grid-template-areas:
+            "logof" 
+            "horario" 
+            "tarjeta";
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto;
     }
 }
