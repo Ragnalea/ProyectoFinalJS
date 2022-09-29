@@ -38,46 +38,59 @@ header {
   width: 450px; }
 
 nav {
-  display: flex;
-  width: 100%;
   align-items: center;
   justify-content: flex-end; }
   nav ul {
     display: flex;
-    align-items: center; }
+    justify-content: end; }
     nav ul li {
       list-style: none;
       justify-content: space-between;
-      font-family: 'Times New Roman';
-      padding: 15px; }
+      font-family: 'Times New Roman'; }
+
+.navegar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; }
 
 .navg {
-  padding: 33px !important; }
+  padding: 18px; }
 
 .titcolor {
-  color: white !important;
+  color: white;
   font-style: italic; }
 
 a {
   text-decoration: none;
-  color: aliceblue; }
+  color: #0d6efd; }
 
 @media only screen and (max-width: 768px) {
   .imglogo {
     height: 90px; }
   .titcolor {
-    font-size: 30px !important; }
-  nav ul li {
-    padding: 1%; }
+    font-size: 30px; }
   .textbox {
-    width: 289px !important;
+    width: 289px;
     margin-left: 8px; }
   .botonbus {
     background-color: gray;
     width: 70px;
     height: 32px;
     margin-bottom: 25px;
-    align-self: flex-start; } }
+    align-self: flex-start; }
+  .navg {
+    padding: 0px; }
+  .navegar {
+    padding-right: 11px; }
+    .navegar ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly; }
+      .navegar ul li {
+        padding-top: 8px;
+        padding-bottom: 8px;
+        padding-right: 16px;
+        padding-left: 16px; } }
 
 main {
   padding-bottom: 20px; }
@@ -95,7 +108,7 @@ h2 {
   font-size: 50px;
   font-family: 'Courier New';
   justify-content: flex-start;
-  color: palegoldenrod; }
+  color: chartreuse; }
 
 img {
   padding: 10px;
@@ -136,7 +149,8 @@ h3 {
 
 .detpro {
   justify-content: flex-end;
-  align-items: center; }
+  align-items: center;
+  font-size: 60px; }
 
 .detallespro {
   display: flex;
@@ -182,9 +196,11 @@ p {
   .detallespro {
     justify-content: center !important; }
   .redes {
-    height: 80px; }
+    height: 80px;
+    overflow-y: hidden; }
   h2 {
-    font-size: 25px !important; }
+    font-size: 25px;
+    color: chartreuse; }
   .botonreg {
     background-color: gray;
     align-self: center;
@@ -192,7 +208,7 @@ p {
     height: 40px;
     margin-top: 65px; }
   .recomendacion {
-    font-size: 40px; }
+    font-size: 31px; }
   .video {
     height: 355px; }
   p {
@@ -208,7 +224,7 @@ footer {
   height: 75px; }
 
 h4 {
-  font-size: 18px;
+  font-size: 17px;
   color: aliceblue; }
 
 .gridprincipal {
@@ -229,7 +245,7 @@ footer {
 .gridheader {
   display: grid;
   grid-template-areas: "logoh busqueda nav";
-  grid-template-columns: 33% 34% 33%;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto; }
 
 .gridfooter {
@@ -247,18 +263,19 @@ footer {
 .copy {
   grid-area: res; }
 
-.nav {
+.navegar {
   grid-area: nav; }
 
 @media only screen and (max-width: 768px) {
   .gridprincipal {
+    width: 100%;
+    height: 100%;
     display: grid;
     grid-template-areas: "header" "header" "header" "main" "main" "main" "main" "main" "main" "main" "main" "main" "main" "main" "footer" "footer" "footer";
     grid-template-columns: 100%;
     grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto; }
   header {
-    grid-area: header;
-    width: 100%; }
+    grid-area: header; }
   .gridheader {
     display: grid;
     grid-template-areas: "logoh" "busqueda"  "nav";
@@ -268,15 +285,6 @@ footer {
     grid-area: main; }
   footer {
     grid-area: footer; }
-  .nav {
-    grid-area: nav;
-    padding: 0%;
-    width: 100% !important; }
-    .nav ul {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-evenly !important;
-      width: 100%; }
   .gridfooter {
     display: grid;
     grid-template-areas: "logof"  "horario"  "tarjeta" "res";
@@ -286,7 +294,8 @@ footer {
 * {
   flex-wrap: wrap;
   padding: 0%;
-  margin: 0%; }
+  margin: 0%;
+  overflow-x: hidden; }
 
 body {
   background-image: url(../assets/img/fondodesk.jpg); }

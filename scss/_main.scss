@@ -19,7 +19,7 @@ h2 {
     font-size: 50px;
     font-family: 'Courier New';
     justify-content: flex-start;
-    color: map-get($paletascolores, subtit);
+    color: chartreuse;
 }
 
 img {
@@ -78,6 +78,7 @@ h3 {
 .detpro {
     justify-content: flex-end;
     align-items: center;
+    font-size: 60px;
 }
 
 .detallespro {
@@ -140,10 +141,12 @@ p {
 
     .redes {
         height: 80px;
+        overflow-y: hidden;
     }
 
     h2 {
-        font-size: 25px !important;
+        font-size: 25px;
+        color:chartreuse;
     }
 
     .botonreg {
@@ -155,7 +158,7 @@ p {
     }
 
     .recomendacion {
-        font-size: 40px;
+        font-size: 31px;
     }
 
     .video {

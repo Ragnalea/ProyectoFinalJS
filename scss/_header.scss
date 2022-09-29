@@ -1,4 +1,4 @@
-header{
+header {
     backdrop-filter: contrast(0.5);
 }
 
@@ -12,49 +12,54 @@ header{
     align-self: center
 }
 
-.botonbus{
+.botonbus {
     background-color: gray;
     width: 59px;
     height: 43px;
     align-self: flex-start;
 }
 
-.textbox{
+.textbox {
     margin-bottom: 15px;
     height: 43px;
     width: 450px;
 }
+
 nav {
-    display: flex;
-    width: 100%;
     align-items: center;
     justify-content: flex-end;
+
     ul {
         display: flex;
-        align-items: center;
+        justify-content: end;
 
         li {
             list-style: none;
             justify-content: space-between;
             font-family: 'Times New Roman';
-            padding: 15px;
         }
     }
 }
 
-.navg{
-    padding: 33px !important;
+.navegar{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+.navg {
+    padding: 18px;
 }
 
 .titcolor {
     @extend .titulo;
-    color: map-get($paletascolores, titulo) !important;
+    color: map-get($paletascolores, titulo);
     font-style: italic;
 }
 
 a {
     text-decoration: none;
-    color: aliceblue;
+    color: #0d6efd;
 }
 
 @media only screen and (max-width: 768px) {
@@ -64,23 +69,37 @@ a {
     }
 
     .titcolor {
-        font-size: 30px !important;
-    }
-
-    nav ul li {
-        padding: 1%;
+        font-size: 30px;
     }
 
     .textbox {
-        width: 289px !important;
+        width: 289px;
         margin-left: 8px;
     }
 
-    .botonbus{
+    .botonbus {
         background-color: gray;
         width: 70px;
         height: 32px;
         margin-bottom: 25px;
         align-self: flex-start;
+    }
+    .navg{
+        padding: 0px;
+    }
+    .navegar {
+        padding-right: 11px;
+        
+        ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            li{
+                padding-top: 8px;
+                padding-bottom: 8px;
+                padding-right: 16px;
+                padding-left: 16px;
+            }
+        }
     }
 }
