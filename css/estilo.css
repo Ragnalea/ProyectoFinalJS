@@ -51,6 +51,9 @@ nav {
       font-family: 'Times New Roman';
       padding: 15px; }
 
+.navg {
+  padding: 33px !important; }
+
 .titcolor {
   color: white !important;
   font-style: italic; }

@@ -42,6 +42,10 @@ nav {
     }
 }
 
+.navg{
+    padding: 33px !important;
+}
+
 .titcolor {
     @extend .titulo;
     color: map-get($paletascolores, titulo) !important;
