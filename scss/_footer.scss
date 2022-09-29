@@ -1,7 +1,12 @@
-footer {
-    background-color: map-get($paletascolores, bgcolor);
+footer{
+    backdrop-filter: contrast(0.5);
 }
 
 .footimg {
     height: 75px;
+}
+
+h4{
+    font-size: 18px;
+    color: aliceblue;
 }
