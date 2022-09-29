@@ -55,6 +55,10 @@ nav {
   color: white !important;
   font-style: italic; }
 
+a {
+  text-decoration: none;
+  color: aliceblue; }
+
 @media only screen and (max-width: 768px) {
   .imglogo {
     height: 90px; }
@@ -84,9 +88,6 @@ label {
   font-style: italic;
   text-decoration-line: underline; }
 
-a {
-  text-decoration: none; }
-
 h2 {
   font-size: 50px;
   font-family: 'Courier New';
@@ -100,11 +101,8 @@ img {
 .tablecss {
   text-align: center;
   border-collapse: separate;
-  border-color: black;
   backdrop-filter: contrast(0.5); }
   .tablecss thead tr th {
-    background-color: gray;
-    color: black;
     font-size: 1.3rem; }
   .tablecss > thead,
   .tablecss > tbody {
@@ -114,12 +112,11 @@ img {
       color: cyan; }
       .tablecss > thead > tr:hover,
       .tablecss > tbody > tr:hover {
-        background-color: aquamarine;
+        background-color: aliceblue;
         color: red; }
       .tablecss > thead > tr th,
       .tablecss > tbody > tr th {
         font-size: 20px;
-        background-color: gray;
         color: black; }
       .tablecss > thead > tr th,
       .tablecss > thead > tr td,
@@ -163,7 +160,6 @@ h3 {
   color: orangered; }
 
 .botonreg {
-  background-color: gray;
   align-self: center;
   width: 135px;
   height: 40px;

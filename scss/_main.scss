@@ -4,7 +4,7 @@ main {
 
 label {
     backdrop-filter: contrast(0.5);
-    color: chocolate;
+    color: map-get($paletascolores , lab);
 }
 
 .titcolor {
@@ -14,16 +14,12 @@ label {
     text-decoration-line: underline;
 }
 
-a {
-    text-decoration: none;
-}
-
 h2 {
     @extend .titulo;
     font-size: 50px;
     font-family: 'Courier New';
     justify-content: flex-start;
-    color: palegoldenrod;
+    color: map-get($paletascolores, subtit);
 }
 
 img {
@@ -57,7 +53,7 @@ img {
 
             th {
                 font-size: 20px;
-                background-color: gray;
+                background-color: map-get($paletascolores, fondo);
                 color: black;
             }
 
@@ -71,8 +67,8 @@ img {
 
 
 h3 {
-    font-size: 45px;    
-    color: white;
+    font-size: 45px;
+    color: map-get($paletascolores, titulo);
 }
 
 .table {
@@ -89,7 +85,7 @@ h3 {
     justify-content: center;
     align-items: center;
     font-size: 21px;
-    color: white;
+    color: map-get($paletascolores, titulo);
 }
 
 .estructuraform,
@@ -114,7 +110,7 @@ h3 {
 }
 
 .botonreg {
-    background-color: gray;
+    background-color: map-get($paletascolores, fondo);
     align-self: center;
     width: 135px;
     height: 40px;
@@ -169,8 +165,9 @@ p {
     p {
         font-size: 15px !important;
     }
+
     .estructuraform,
-.estructuraform2 {
-    width: 100%;
-}
+    .estructuraform2 {
+        width: 100%;
+    }
 }

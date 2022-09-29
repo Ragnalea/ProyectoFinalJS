@@ -1,10 +1,10 @@
 $paletascolores: (
-    bgcolor:rgb(239, 205, 159),
     maincolor: burlywood,
-    letras: black,
-    fondo: gray,
-    suave: aquamarine,
-    titulo:white
+    subtit:palegoldenrod,
+    boton: gray,
+    suave: aliceblue,
+    titulo:white,
+    lab:chocolate,
 );
 
 @mixin altura ($width, $height, $padb) {
