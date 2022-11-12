@@ -2,6 +2,12 @@ main {
     padding-bottom: 20px;
 }
 
+.pass{
+    font-size: 23px;
+    margin-bottom: 5px;
+    color:aqua;
+}
+
 label {
     backdrop-filter: contrast(0.5);
     color: map-get($paletascolores , lab);
@@ -115,7 +121,8 @@ h3 {
     align-self: center;
     width: 135px;
     height: 40px;
-    margin-top: 65px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .recomendacion {

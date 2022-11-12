@@ -18,6 +18,16 @@
 header {
   backdrop-filter: contrast(0.5); }
 
+.inicio {
+  font-size: 70px;
+  color: black; }
+
+.relieve {
+  color: orange; }
+
+.cartel {
+  width: 100%; }
+
 .imglogo {
   height: 125px;
   padding: 0%;
@@ -94,6 +104,11 @@ a {
 
 main {
   padding-bottom: 20px; }
+
+.pass {
+  font-size: 23px;
+  margin-bottom: 5px;
+  color: aqua; }
 
 label {
   backdrop-filter: contrast(0.5);
@@ -180,7 +195,8 @@ h3 {
   align-self: center;
   width: 135px;
   height: 40px;
-  margin-top: 65px; }
+  margin-top: 15px;
+  margin-bottom: 15px; }
 
 .recomendacion {
   margin-top: 75px; }
@@ -233,8 +249,26 @@ h4 {
   grid-template-columns: 33% 33% 34%;
   grid-template-rows: auto auto auto auto; }
 
+.gridInicio {
+  display: grid;
+  grid-template-areas: "header header header" "main main main" "footer footer footer" "res res res";
+  grid-template-columns: 33% 33% 34%;
+  grid-template-rows: auto auto auto auto; }
+
+.gridIniHeader {
+  display: grid;
+  grid-template-areas: "logoh text text";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto; }
+
+.logoempresa {
+  grid-area: logoh; }
+
 header {
   grid-area: header; }
+
+.cartel {
+  grid-area: text; }
 
 main {
   grid-area: main; }
@@ -253,9 +287,6 @@ footer {
   grid-template-areas: "logof horario tarjeta" "res res res";
   grid-template-columns: 33% 34% 33%;
   grid-template-rows: auto auto; }
-
-.logoempresa {
-  grid-area: logoh; }
 
 .barra {
   grid-area: busqueda; }

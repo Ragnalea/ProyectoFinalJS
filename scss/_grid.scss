@@ -9,8 +9,35 @@
     grid-template-rows: auto auto auto auto;
 }
 
+.gridInicio {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "main main main"
+        "footer footer footer"
+        "res res res";
+    grid-template-columns: 33% 33% 34%;
+    grid-template-rows: auto auto auto auto;
+}
+
+.gridIniHeader {
+    display: grid;
+    grid-template-areas:
+        "logoh text text";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+}
+
+.logoempresa {
+    grid-area: logoh;
+}
+
 header {
     grid-area: header;
+}
+
+.cartel{
+    grid-area: text;
 }
 
 main {
@@ -39,9 +66,7 @@ footer {
     grid-template-rows: auto auto;
 }
 
-.logoempresa {
-    grid-area: logoh;
-}
+
 
 .barra {
     grid-area: busqueda;
