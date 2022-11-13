@@ -16,7 +16,7 @@
     <div class="gridprincipal">
         <header class="gridIniHeader">
             <div class="logoempresa centrar">
-                <a href="../index.html"> <img src="assets/img/logo.png" alt="logo empresa" class="imglogo"></a>
+                <a href="../index.html"> <img src="../assets/img/logo.png" alt="logo empresa" class="imglogo"></a>
             </div>
             <div class="cartel">
                 <p class="inicio">BIENVENIDO A <strong class="relieve">LA ESPERANZA AMOBLAMIENTOS</strong></p>
@@ -27,21 +27,23 @@
                 <h1 data-aos="fade-right" class="titcolor centrar">Registrate</h1>
             </div>
             <div class="form1 centrar">
-                <form data-aos="fade-left" action="registro" class="estructuraform centrar">
+                <form data-aos="fade-left" action="registro" class="estructuraform centrar" id="formulario">
 
                     <label for="nombre">Nombre:</label>
-                    <input type="text" placeholder="Nombre Completo" name="nombre" class="textbox">
+                    <input type="text" placeholder="Nombre Completo" name="nombre" class="textbox" id="name">
 
                     <label for="apellido">Apellido:</label>
-                    <input type="text" placeholder="Apellido" name="apellido" class="textbox">
+                    <input type="text" placeholder="Apellido" name="apellido" class="textbox" id="lastname">
 
                     <label for="email">Email:</label>
-                    <input type="email" placeholder="Correo electronico" name="email" class="textbox">
+                    <input type="email" placeholder="Correo electronico" name="email" class="textbox" id="correo">
 
                     <label for="contraseña">Contraseña:</label>
-                    <input type="password" placeholder="Contraseña" name="contraseña" class="textbox">
+                    <input type="password" placeholder="Contraseña" name="contraseña" class="textbox" id="passw">
 
-                    <input type="reset" value="Registrarse" class="botonreg">
+                    <input type="button" value="Registrarse" class="botonreg" id="newAccount">
+
+                    <p id="alert"></p>
                 </form>
             </div>
         </main>
@@ -64,6 +66,7 @@
             crossorigin="anonymous"></script>
     </div>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../JS/registro.js"></script>
     <script>
         AOS.init();
     </script>

@@ -2,12 +2,22 @@ main {
     padding-bottom: 20px;
 }
 
+.recordar{
+    color: crimson;
+    
+}
+
 .pass{
     font-size: 23px;
     margin-bottom: 5px;
     color:aqua;
 }
-
+.caja{
+    width: 200px;
+}
+.check{
+    width: 50px;
+}
 label {
     backdrop-filter: contrast(0.5);
     color: map-get($paletascolores , lab);
