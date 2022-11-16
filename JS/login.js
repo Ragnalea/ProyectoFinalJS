@@ -8,15 +8,22 @@ registro.addEventListener("click",(e) =>{
 }
 )
 
-function comparar(){
+//function comparar(){
     let persona = JSON.parse(localStorage.getItem("usuario"))
-    if (persona.Correo == Email.value) {
-        let mensaje1 = "funciona"
-        console.log(mensaje1)
-        
-    }
-}
+    console.log(persona)
 
-init.addEventListener(click.(e)=>{
+    // if (persona.Correo == correo.value) {
+    //     let mensaje1 = "funciona"
+    //     console.log(mensaje1)
+        
+    //}
+//}
+
+init.addEventListener("click", (e)=>{
+    const encontrado = persona.find((usuario)=>{
+        return usuario.Correo == correo.value;
+        
+    })
+    console.log(encontrado);
 
 })

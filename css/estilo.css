@@ -108,6 +108,9 @@ main {
 .recordar {
   color: crimson; }
 
+#newAccount {
+  margin-right: 25px; }
+
 .pass {
   font-size: 23px;
   margin-bottom: 5px;
@@ -211,7 +214,7 @@ h3 {
   margin-top: 75px; }
 
 p {
-  font-size: 30px;
+  font-size: 29px;
   backdrop-filter: contrast(0.5);
   color: cornsilk; }
 
