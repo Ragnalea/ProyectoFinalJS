@@ -108,6 +108,10 @@ main {
 .recordar {
   color: crimson; }
 
+h5 {
+  font-size: 27px;
+  color: red; }
+
 #newAccount {
   margin-right: 25px; }
 

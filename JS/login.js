@@ -2,28 +2,40 @@ const registro = document.getElementById("newAccount")
 const correo = document.getElementById("mail")
 const pass = document.getElementById("contr")
 const init = document.getElementById("btninit")
+const mje = document.getElementById("Advertencia")
+
+
+
 
 registro.addEventListener("click",(e) =>{
     window.location.href = "pages/registro.html"
 }
+
 )
 
-//function comparar(){
+//traer el array
     let persona = JSON.parse(localStorage.getItem("usuario"))
-    console.log(persona)
-
-    // if (persona.Correo == correo.value) {
-    //     let mensaje1 = "funciona"
-    //     console.log(mensaje1)
-        
-    //}
-//}
-
+;
 init.addEventListener("click", (e)=>{
-    const encontrado = persona.find((usuario)=>{
+    //buscar usuario
+    const individuo = persona.find((usuario)=>{
         return usuario.Correo == correo.value;
         
     })
-    console.log(encontrado);
-
-})
+    if (correo.value == "" || pass.value == "") {
+        mje.innerText = "Los campos no pueden estar vacios"
+    }else{
+    //si usuario existe, comparar la contraseña
+    if (individuo) {
+        let L = persona.indexOf(individuo);
+        
+        if (individuo.Contraseña == pass.value) {
+        window.location.href = "pages/home.html"
+        }else{
+        mje.innerText= "Los datos son incorrectos"
+        }
+    }else{
+        
+        mje.innerText= "Este mail no esta registrado"
+    }
+}})
