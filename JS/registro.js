@@ -1,5 +1,4 @@
 let Usuarios;
-let Diseñador;
 let Perfil;
 
 //const formulario = document.querySelector(".form1"),
@@ -19,12 +18,6 @@ if (localStorage.getItem("usuario")){
     Usuarios = [];
 }
 
-
-if (localStorage.getItem("diseñador")){
-    Diseñador = JSON.parse(localStorage.getItem("diseñador"));
-}else{
-    Diseñador = [];
-}
 
 //limpiar campos
 function clearfield (){
@@ -48,30 +41,24 @@ function registro(){
     
     if (mailIndividuo){
         parr.innerText = "Este mail ya fue registrado"
+        Email.value =""
+        Email.focus();
     }else{
         if (nickIndividuo) {
             parr.innerText = "Ese nick ya fue tomado, por favor elija otro"
+            nick.value =""
+            nick.focus();
         }else{
         let persona ={Nombre: Name.value, Apellido: Lastname.value,Nick: nick.value, Correo: Email.value, Contraseña: Pass.value}
-        if(individuo){
-            
-        }else{
-        if (persona.Correo.includes("@coder.com")) {
-            Diseñador.push(persona);
-            localStorage.setItem("diseñador",JSON.stringify(Diseñador));
-            parr.innerText = "Bienvenido Diseñador. Intente iniciar sesion"
-            sessionStorage.setItem("perfil",JSON.stringify(Diseñador))
-        }else{
         if (persona.Correo.includes("@hotmail.com")) {
             Usuarios.push(persona);
             localStorage.setItem("usuario",JSON.stringify(Usuarios));
             parr.innerText = "Bienvenido Usuario. Intente iniciar sesion"
-            sessionStorage.setItem("perfil",JSON.stringify(Usuarios))
         }else{
-            parr.innerText = "Solo se acepta @coder.com y @hotmail.com"
+            parr.innerText = "Solo se acepta @hotmail.com"
         }
         }
-    }}}}
+    }}
 
 
 
@@ -79,7 +66,7 @@ function registro(){
 btn.addEventListener("click", (e)=>{
     registro();
     
-    clearfield();
+    //clearfield();
 });
 
 btnlog.addEventListener("click",(e)=>{
