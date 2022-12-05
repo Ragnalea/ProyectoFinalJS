@@ -5,9 +5,9 @@ const init = document.getElementById("btninit")
 const mje = document.getElementById("Advertencia")
 
 
-//traer el array
+
 let Usuario = JSON.parse(localStorage.getItem("usuario"));
-//let Sesion = [];
+let Sesion = [];
 
 
 registro.addEventListener("click",(e) =>{
@@ -33,6 +33,9 @@ init.addEventListener("click", (e)=>{
         let L = Usuario.indexOf(mailIndividuo);
         if (Usuario[L].Correo == cuenta.value && Usuario[L].Contraseña == pass.value) 
         {
+            let persona ={Nick: nick.value}
+            Sesion.push(persona);
+            sessionStorage.setItem("sesion",JSON.stringify(Sesion));
             window.location.href = "pages/home.html";
         }else{
             mensajeError();
@@ -43,6 +46,8 @@ init.addEventListener("click", (e)=>{
                 if (Usuario[N].Nick == cuenta.value && Usuario[N].Contraseña == pass.value) 
                 {
                 window.location.href = "pages/home.html";
+                Sesion.push(persona);
+                sessionStorage.setItem("sesion",JSON.stringify(Sesion));
                 }else{
                     mensajeError();
                 }

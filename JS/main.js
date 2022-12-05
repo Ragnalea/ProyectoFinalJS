@@ -1,3 +1,5 @@
-Usuarios = JSON.parse(sessionStorage.getItem("ususario"));
-
-console.log(Usuarios.Nick[1])
+fetch('../Json/productos.json')
+.then(res=>res.json())
+.then(data=>{
+    console.log(data)
+})

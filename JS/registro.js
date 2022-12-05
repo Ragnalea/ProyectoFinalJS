@@ -19,7 +19,7 @@ if (localStorage.getItem("usuario")){
 }
 
 
-//limpiar campos
+
 function clearfield (){
     Name.value=""
     Lastname.value=""
@@ -29,7 +29,7 @@ function clearfield (){
 }
 
 
-//almacenar en el local
+
 function registro(){
     const mailIndividuo = Usuarios.find((usuario)=>{
         return usuario.Correo == Email.value
@@ -41,13 +41,11 @@ function registro(){
     
     if (mailIndividuo){
         parr.innerText = "Este mail ya fue registrado"
-        Email.value =""
-        Email.focus();
+
     }else{
         if (nickIndividuo) {
             parr.innerText = "Ese nick ya fue tomado, por favor elija otro"
-            nick.value =""
-            nick.focus();
+
         }else{
         let persona ={Nombre: Name.value, Apellido: Lastname.value,Nick: nick.value, Correo: Email.value, Contraseña: Pass.value}
         if (persona.Correo.includes("@hotmail.com")) {
@@ -66,7 +64,7 @@ function registro(){
 btn.addEventListener("click", (e)=>{
     registro();
     
-    //clearfield();
+    clearfield();
 });
 
 btnlog.addEventListener("click",(e)=>{
