@@ -12,9 +12,6 @@ h5{
     color: red;
 }
 
-#newAccount{
-    margin-right: 25px;
-}
 
 .pass{
     font-size: 23px;
@@ -47,9 +44,8 @@ h2 {
     color: chartreuse;
 }
 
-img {
-    padding: 10px;
-    margin-bottom: 5px;
+.item {
+    width: 14%;
 }
 
 .tablecss {
@@ -93,7 +89,7 @@ img {
 
 h3 {
     font-size: 45px;
-    color: map-get($paletascolores, titulo);
+    color: cyan;
 }
 
 .table {

@@ -69,10 +69,6 @@ header {
     grid-area: header;
 }
 
-.cartel{
-    grid-area: text;
-}
-
 main {
     grid-area: main;
 }
@@ -81,6 +77,13 @@ footer {
     grid-area: footer;
 }
 
+.buyBtn{
+    background-color: gray;
+    height: 30px;
+    width: 60%;
+    margin-top: 7px;
+    margin-bottom: 15px;
+}
 
 .titulo1{
     grid-area: desc1;
@@ -99,124 +102,132 @@ footer {
 }
 
 .titulo2{
-    grid-area: desc1;
+    grid-area: desc2;
 }
 
 .img2{
-    grid-area: img1;
+    grid-area: img2;
 }
 
 .precio2{
-    grid-area: precio1;
+    grid-area: precio2;
 }
 
 .btn2{
-    grid-area: btn1;
+    grid-area: btn2;
 }
+
 .titulo3{
-    grid-area: desc1;
+    grid-area: desc3;
 }
 
 .img3{
-    grid-area: img1;
+    grid-area: img3;
 }
 
 .precio3{
-    grid-area: precio1;
+    grid-area: precio3;
 }
 
 .btn3{
-    grid-area: btn1;
+    grid-area: btn3;
 }
+
 .titulo4{
-    grid-area: desc1;
+    grid-area: desc4;
 }
 
 .img4{
-    grid-area: img1;
+    grid-area: img4;
 }
 
 .precio4{
-    grid-area: precio1;
+    grid-area: precio4;
 }
 
 .btn4{
-    grid-area: btn1;
+    grid-area: btn4;
 }
+
 .titulo5{
-    grid-area: desc1;
+    grid-area: desc5;
 }
 
 .img5{
-    grid-area: img1;
+    grid-area: img5;
+    width: 100%;
 }
 
 .precio5{
-    grid-area: precio1;
+    grid-area: precio5;
 }
 
 .btn5{
-    grid-area: btn1;
+    grid-area: btn5;
 }
+
 .titulo6{
-    grid-area: desc1;
+    grid-area: desc6;
 }
 
 .img6{
-    grid-area: img1;
+    grid-area: img6;
 }
 
 .precio6{
-    grid-area: precio1;
+    grid-area: precio6;
 }
 
 .btn6{
-    grid-area: btn1;
+    grid-area: btn6;
 }
+
 .titulo7{
-    grid-area: desc1;
+    grid-area: desc7;
 }
 
 .img7{
-    grid-area: img1;
+    grid-area: img7;
 }
 
 .precio7{
-    grid-area: precio1;
+    grid-area: precio7;
 }
 
 .btn7{
-    grid-area: btn1;
+    grid-area: btn7;
 }
+
 .titulo8{
-    grid-area: desc1;
+    grid-area: desc8;
 }
 
 .img8{
-    grid-area: img1;
+    grid-area: img8;
 }
 
 .precio8{
-    grid-area: precio1;
+    grid-area: precio8;
 }
 
 .btn8{
-    grid-area: btn1;
+    grid-area: btn8;
 }
+
 .titulo9{
-    grid-area: desc1;
+    grid-area: desc9;
 }
 
 .img9{
-    grid-area: img1;
+    grid-area: img9;
 }
 
 .precio9{
-    grid-area: precio1;
+    grid-area: precio9;
 }
 
 .btn9{
-    grid-area: btn1;
+    grid-area: btn9;
 }
 
 
