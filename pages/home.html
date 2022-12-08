@@ -9,6 +9,7 @@
     <meta name="keywords"
         content="Imagenes de los muebles, muebles para la casa, San Nicolas de los Arroyos, compra de muebles, organizar tu hogar">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <title>La Esperanza Amoblamientos</title>
     <link rel="stylesheet" href="../css/estilo.css">
     <link rel="icon" href="../img/logo.png">
@@ -22,14 +23,14 @@
             </div>
             <div class="barra centrar">
                 <input type="search" placeholder="Busqueda" name="search" class="textbox">
-                <input type="reset" value="Buscar" class="botonbus">
+                <input type="reset" value="Buscar" class="botonbus" id="btnSrc">
             </div>
             <nav class="navegar">
                 <ul>
                     <li class="navg"><a href="home.html">Inicio</a></li>
                     <li class="navg"><a href="nosotros.html">Nosotros</a></li>
                     <div>
-                        <a href="carrito.html"> <img src="../img/carrito.png" alt="carrito" class="carro" id="carrito"></a>
+                        <h2 class="verCarrito" id="verCarro">🛒<span id="cantCart" class="cantidadCart"></span></h2>
                         <p class="centrar" id="contador"></p>                        
                     </div>
                 </ul>
@@ -40,8 +41,10 @@
                 <h1 data-aos="zoom-in-down" class="titcolor centrar"> Lleva la comodidad a tu hogar</h1>
             </div>
 
-            <div id="tarjetas"></div>
+            <div id="contenedor"></div>
             
+            <div id="modalContainer"></div>
+
         </main>
         <footer class="gridfooter">
             <div class="centrar">
@@ -59,10 +62,12 @@
         </footer>
     </div>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script>
         AOS.init();
     </script>
     <script src="../JS/main.js"></script>
+    <script src="../JS/carrito.js"></script>
 </body>
 
 </html>

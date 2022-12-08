@@ -3,54 +3,63 @@
       "id":1,
       "nombre":"Ropero",
       "precio":15000,
-      "img":"../img/ropero.jpg"
+      "img":"../img/ropero.jpg",
+      "cant": 1
    },
    {
       "id":2,
       "nombre":"Bahiut",
       "precio":8000,
-      "img":"../img/bahiut.jpg"
+      "img":"../img/bahiut.jpg",
+      "cant": 1
    },
    {
       "id":3,
       "nombre":"Cartel",
       "precio":5000,
-      "img":"../img/cartel.jpg"
+      "img":"../img/cartel.jpg",
+      "cant": 1
    },
    {
       "id":4,
       "nombre":"Comodon",
       "precio":11500,
-      "img":"../img/comodon.jpg"
+      "img":"../img/comodon.jpg",
+      "cant": 1
    },
    {
       "id":5,
       "nombre":"Desayunador",
       "precio":10000,
-      "img":"../img/desayunador.jpg"
+      "img":"../img/desayunador.jpg",
+      "cant": 1
    },
    {
       "id":6,
       "nombre":"Esquinero",
       "precio":7500,
-      "img":"../img/esquinero.jpg"
+      "img":"../img/esquinero.jpg",
+      "cant": 1
    },
    {
       "id":7,
       "nombre":"Verdulero",
       "precio":9000,
-      "img":"../img/verdulero.jpg"
+      "img":"../img/verdulero.jpg",
+      "cant": 1
    },
    {
       "id":8,
       "nombre":"Botinero",
       "precio":6000,
-      "img":"../img/botinero.jpg"
+      "img":"../img/botinero.jpg",
+      "cant": 1
    },
    {
       "id":9,
       "nombre":"Vestidor",
       "precio":7000,
-      "img":"../img/vestidor.jpg"
+      "img":"../img/vestidor.jpg",
+      "cant": 1
    }
 ]

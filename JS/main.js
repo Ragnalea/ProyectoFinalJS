@@ -1,9 +1,7 @@
-
-let Id = 0;
-let Carro;
-let product;
-
-
+const contenedor = document.getElementById("contenedor");
+const verCarrito = document.getElementById("verCarro");
+const modalCont = document.getElementById("modalContainer");
+const cantidadCarrito = document.getElementById("cantCart")
 
 
 if (localStorage.getItem("carrito")){
@@ -12,71 +10,51 @@ if (localStorage.getItem("carrito")){
     Carro = [];
 }
 
-const tarjeta = document.getElementById("tarjetas");
-const countCart = document.getElementById("contador");
-let Total = 0
-
-Carro.forEach((el)=>{
-    Total = Total + el.Cantidad
-    
-    countCart.innerText = (Total) 
-})
 
 
 fetch('../Json/productos.json')
 .then(Response=> Response.json())
 .then((data =>{
 
-data.forEach((el) => {
-    let prod = document.createElement("div");
-    prod.className = "item";
-    prod.innerHTML = `
-    <h3>${el.nombre}</h3>
-    <img src="${el.img}">
-    <p class="centrar"> $ ${el.precio}</p>
-    `
-    tarjeta.append(prod);
+    data.forEach((el) => {
+        let producto = document.createElement("div");
+        producto.className= "card";
+        producto.innerHTML = `
+        <img src="${el.img}">
+        <h3">${el.nombre}</h3>        
+        <p class="price"> $ ${el.precio}</p>
+    `;
+        contenedor.append(producto);
 
     let btnBuy = document.createElement("button")
-    btnBuy.className="compra";
-    btnBuy.id= Id += 1;
+    btnBuy.className= "comprar";
+    btnBuy.id= el.id;
     btnBuy.innerText= "Agregar al carrito";
-    prod.append(btnBuy);
+    producto.append(btnBuy);
 
+        btnBuy.addEventListener("click",() => {
 
-    btnBuy.addEventListener('click',() => {
+            const repeat = Carro.some((repeatProduct)=> repeatProduct.id === el.id)
+            if (repeat) {
+                Carro.map((produc)=>{
+                    if (produc.id === el.id) {
+                        produc.cant++;
+                    }
+                })
+            }else{
 
-        const ticket = Carro.find((mercad)=>{
-            return data[btnBuy.id-1].nombre == mercad.Desc
-    })
-    if(ticket){
-        let T = Carro.indexOf(ticket)
-        let C = ticket.Cantidad += 1
-        let P = data[btnBuy.id-1].precio * C
-        Carro[T].Cantidad= C
-        Carro[T].Precio= P
-
-        localStorage.setItem("carrito",JSON.stringify(Carro))
-        
-
-}else{
-    let product ={Desc: data[btnBuy.id-1].nombre, Precio: data[btnBuy.id-1].precio, Cantidad: 1}
-    Carro.push(product)
-    localStorage.setItem("carrito",JSON.stringify(Carro))
-
-
-}
-
-Total = 0
-Carro.forEach((el)=>{
-    Total = Total + el.Cantidad
-countCart.innerText = (Total) 
-})
+            Carro.push({
+                id : el.id,
+                img: el.img,
+                nombre: el.nombre,
+                precio: el.precio,
+                cant: el.cant,
+            })}
+            carritoCounter();
+        })
 
 
 
-})})}))
 
-
-
+})}))
 

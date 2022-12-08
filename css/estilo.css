@@ -121,6 +121,121 @@ h5 {
   font-size: 27px;
   color: red; }
 
+.margin {
+  margin-left: 15px; }
+
+.modalContainer {
+  width: 80%;
+  margin: 0 10%;
+  max-height: 826px;
+  color: #fff;
+  background-color: #121212;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  overflow: auto;
+  z-index: 9;
+  top: 113;
+  scrollbar-color: none; }
+
+.modalContainer::-webkit-scrollbar {
+  display: none; }
+
+.eliminar {
+  cursor: pointer; }
+
+.importeTot {
+  font-size: 45px;
+  color: green; }
+
+.pagar {
+  width: 30%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.cantidadCart {
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  font-size: 12px;
+  padding: 4px;
+  top: 37px;
+  position: absolute;
+  display: none; }
+
+.modalHeader {
+  display: flex;
+  justify-content: space-around;
+  background-color: #0a0909;
+  color: #fff;
+  width: 100%; }
+
+.modalContainer > .modalContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 70%;
+  margin: 10px; }
+
+.modalContainer > div > img {
+  height: 120px;
+  width: 120px; }
+
+.totalContent {
+  font-size: 25px;
+  padding: 20px;
+  text-align: center;
+  padding-top: 20px; }
+
+.modalHeaderTitle {
+  justify-self: start; }
+
+.ver-carrito {
+  justify-self: start;
+  margin-left: 20px;
+  color: #fff;
+  margin-top: 76 px; }
+
+.card {
+  box-shadow: 0 4px 8px 0 black;
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: 'Times New Roman';
+  font-style: italic;
+  font-size: 25px;
+  color: red; }
+
+#contenedor {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  margin-left: 80px;
+  margin-right: 80px; }
+
+.card > img {
+  width: 90%;
+  height: 250px; }
+
+.price {
+  color: cyan;
+  font-size: 22px; }
+
+.cardButton {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: black;
+  text-align: center;
+  width: 100%;
+  font-size: 18px; }
+
 .pass {
   font-size: 23px;
   margin-bottom: 5px;
