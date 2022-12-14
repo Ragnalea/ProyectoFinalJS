@@ -29,6 +29,8 @@ init.addEventListener("click", (e)=>{
     const nickIndividuo = Usuario.find((usuario)=>{
         return usuario.Nick == cuenta.value})
 
+
+
     if (mailIndividuo){ 
         let L = Usuario.indexOf(mailIndividuo);
         if (Usuario[L].Correo == cuenta.value && Usuario[L].Contraseña == pass.value) 

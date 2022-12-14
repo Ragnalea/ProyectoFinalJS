@@ -1,14 +1,17 @@
 const contenedor = document.getElementById("contenedor");
 const verCarrito = document.getElementById("verCarro");
-const modalCont = document.getElementById("modalContainer");
+const modalCont = document.getElementById("modelCart");
 const cantidadCarrito = document.getElementById("cantCart")
-
+const barra = document.getElementById("busqueda")
 
 if (localStorage.getItem("carrito")){
     Carro = JSON.parse(localStorage.getItem("carrito"));
 }else{
     Carro = [];
 }
+
+
+
 
 
 
@@ -30,9 +33,11 @@ fetch('../Json/productos.json')
     btnBuy.className= "comprar";
     btnBuy.id= el.id;
     btnBuy.innerText= "Agregar al carrito";
+    
     producto.append(btnBuy);
 
         btnBuy.addEventListener("click",() => {
+
 
             const repeat = Carro.some((repeatProduct)=> repeatProduct.id === el.id)
             if (repeat) {
@@ -57,4 +62,3 @@ fetch('../Json/productos.json')
 
 
 })}))
-

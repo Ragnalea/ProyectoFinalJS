@@ -73,7 +73,9 @@ nav {
   justify-content: flex-end; }
 
 .navg {
-  padding: 18px; }
+  padding: 18px;
+  display: flex;
+  align-items: center; }
 
 .titcolor {
   color: white;
@@ -121,29 +123,74 @@ h5 {
   font-size: 27px;
   color: red; }
 
+.titCart {
+  font-size: 25px; }
+
+.desCart {
+  font-size: 21px; }
+
+.imgCart {
+  height: 100px; }
+
 .margin {
   margin-left: 15px; }
 
-.modalContainer {
+.modalHeaderButton {
+  background-color: #121212;
+  cursor: pointer;
+  width: 51px;
+  height: 33px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.modalHeaderTitle {
+  justify-self: start; }
+
+.modalHeader {
+  display: flex;
+  justify-content: space-around;
+  background-color: #0a0909;
+  color: #fff;
+  width: 100%; }
+
+.modalContent > .modalContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 70%;
+  margin: 10px; }
+
+.modalContent > div > img {
+  height: 120px;
+  width: 120px; }
+
+.modalContent {
   width: 80%;
   margin: 0 10%;
   max-height: 826px;
   color: #fff;
   background-color: #121212;
-  display: flex;
   flex-direction: column;
   align-items: center;
-  position: fixed;
   overflow: auto;
   z-index: 9;
-  top: 113;
-  scrollbar-color: none; }
+  top: 113px; }
 
-.modalContainer::-webkit-scrollbar {
+#newAccount {
+  margin-right: 10px; }
+
+.modalContent::-webkit-scrollbar {
   display: none; }
 
 .eliminar {
-  cursor: pointer; }
+  background-color: #121212;
+  cursor: pointer;
+  width: 51px;
+  height: 33px;
+  margin-top: 10px; }
 
 .importeTot {
   font-size: 45px;
@@ -156,43 +203,28 @@ h5 {
   justify-content: center;
   align-items: center; }
 
+.btnCompra {
+  background-color: gray;
+  cursor: pointer;
+  width: 93px;
+  height: 33px;
+  margin-bottom: 21px; }
+
 .cantidadCart {
   background-color: red;
   color: white;
   border-radius: 50%;
-  font-size: 12px;
+  font-size: 13px;
   padding: 4px;
   top: 37px;
   position: absolute;
   display: none; }
-
-.modalHeader {
-  display: flex;
-  justify-content: space-around;
-  background-color: #0a0909;
-  color: #fff;
-  width: 100%; }
-
-.modalContainer > .modalContent {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  width: 70%;
-  margin: 10px; }
-
-.modalContainer > div > img {
-  height: 120px;
-  width: 120px; }
 
 .totalContent {
   font-size: 25px;
   padding: 20px;
   text-align: center;
   padding-top: 20px; }
-
-.modalHeaderTitle {
-  justify-self: start; }
 
 .ver-carrito {
   justify-self: start;
@@ -592,8 +624,7 @@ footer {
 * {
   flex-wrap: wrap;
   padding: 0%;
-  margin: 0%;
-  overflow-x: hidden; }
+  margin: 0%; }
 
 body {
   background-image: url(../img/fondo.jpg); }

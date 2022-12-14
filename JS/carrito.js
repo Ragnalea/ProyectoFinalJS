@@ -23,11 +23,11 @@ const pintarCarrito =() => {
         let carritoContent = document.createElement("div")
         carritoContent.className = "modalContent"
         carritoContent.innerHTML = `
-        <img src="${el.img}">
-        <h3>${el.nombre}</h3>
-        <p>$ ${el.precio}</p>
-        <p>Cantidad: ${el.cant}</p>
-        <p>Total: ${el.cant * el.precio}</p>
+        <img src="${el.img}" class= "imgCart">
+        <h3 class="titCart">${el.nombre}</h3>
+        <p class="desCart">$ ${el.precio}</p>
+        <p class="desCart">Cantidad: ${el.cant}</p>
+        <p class= "desCart">Total: ${el.cant * el.precio}</p>
         `;
 
         modalCont.append(carritoContent);
@@ -36,7 +36,7 @@ const pintarCarrito =() => {
 
         let eliminar = document.createElement("button")
         eliminar.innerText = "❌";
-        eliminar.className = "Eliminar"
+        eliminar.className = "eliminar"
         carritoContent.append(eliminar)
 
         eliminar.addEventListener("click", eliminarProducto)
@@ -48,6 +48,27 @@ const pintarCarrito =() => {
     totBuy.className = "totalContent";
     totBuy.innerHTML = `<h2 class="importeTot">Total a pagar: $ ${total}</h2>`;
     modalCont.append(totBuy);
+
+    let btnBuy = document.createElement("button")
+    btnBuy.innerText = "Comprar";
+    btnBuy.className = "btnCompra"
+    modalCont.append(btnBuy)
+
+    btnBuy.addEventListener("click", () =>{
+        Swal.fire({
+            position: 'Center',
+            icon: 'success',
+            title: 'Gracias por confiar en nosotros  :)',
+            showConfirmButton: false,
+            timer: 2500,
+        })
+
+
+        Carro = [];
+        pintarCarrito();
+        
+    })
+    
     
 };
 
@@ -62,7 +83,7 @@ const eliminarProducto = () =>{
     })
     carritoCounter();
     pintarCarrito();
-
+    modalCont.focus();
 }
 
 const carritoCounter = () => {

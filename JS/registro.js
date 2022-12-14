@@ -39,6 +39,7 @@ function registro(){
         return usuario.Nick == nick.value
     })
     
+
     if (mailIndividuo){
         parr.innerText = "Este mail ya fue registrado"
 

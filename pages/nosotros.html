@@ -17,28 +17,19 @@
 
 <body>
     <div class="container-fluid m-0 p-0 overflow-hidden">
-        <header class="row m-0 p-0">
-            <div class="col-12 col-lg-4 logoempresa centrar">
-                <a href="../index.html"> <img src="../img/logo.png" alt="logo empresa" class="imglogo"></a>
+        <header class="gridheader">
+            <div class="logoempresa centrar">
+                <a href="home.html"> <img src="../img/logo.png" alt="logo empresa" class="imglogo"></a>
             </div>
-            <div class="col-12 col-lg-4 barra centrar">
-                <input type="search" placeholder="Busqueda" name="search" class="textbox">
-                <input type="reset" value="Buscar" class="botonbus">
-            </div>
-            <nav class="col-12 col-lg-4 nav">
-                <ul class="nav">
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="productos.html">Productos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="nosotros.html">Nosotros</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="registro.html">Cuenta</a>
-                    </li>
+
+            <nav class="navegar">
+                <ul>
+                    <li class="navg"><a href="home.html">Inicio</a></li>
+                    <li class="navg"><a href="nosotros.html">Nosotros</a></li>
+                    <div>
+                        <h2 class="verCarrito" id="verCarro">🛒<span id="cantCart" class="cantidadCart"></span></h2>
+                        <p class="centrar" id="contador"></p>                        
+                    </div>
                 </ul>
             </nav>
         </header>
