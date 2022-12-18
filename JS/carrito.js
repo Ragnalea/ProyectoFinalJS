@@ -1,4 +1,13 @@
+    const carritoCounter = () => {
+    cantCart.style.display= "block"
+
+    cantCart.innerText = acumulador
+    };
+
+
 const pintarCarrito =() => {
+
+
     modalCont.innerHTML="";
     modalCont.style.display = "flex";
     modalCont.innerHTML = "";    const modalheader = document.createElement("div")
@@ -19,7 +28,7 @@ const pintarCarrito =() => {
     })
 
 
-    Carro.forEach(el => {
+    carrito.forEach(el => {
         let carritoContent = document.createElement("div")
         carritoContent.className = "modalContent"
         carritoContent.innerHTML = `
@@ -36,19 +45,28 @@ const pintarCarrito =() => {
 
         let eliminar = document.createElement("button")
         eliminar.innerText = "❌";
+        eliminar.id = el.id
         eliminar.className = "eliminar"
         carritoContent.append(eliminar)
+        
+        eliminar.addEventListener("click", () =>{
+        
+            carrito = carrito.filter((el)=>{
+                return el.id != eliminar.id;
+            })
 
-        eliminar.addEventListener("click", eliminarProducto)
+            console.log(carrito)
+            pintarCarrito();
+            }) 
     });
-
-    const total = Carro.reduce((acc, el)=> acc + el.precio * el.cant,0)
-
+    
+    const total = carrito.reduce((acc, el)=> acc + el.precio * el.cant,0)
+    
     const totBuy= document.createElement("div")
     totBuy.className = "totalContent";
     totBuy.innerHTML = `<h2 class="importeTot">Total a pagar: $ ${total}</h2>`;
     modalCont.append(totBuy);
-
+    
     let btnBuy = document.createElement("button")
     btnBuy.innerText = "Comprar";
     btnBuy.className = "btnCompra"
@@ -58,35 +76,30 @@ const pintarCarrito =() => {
         Swal.fire({
             position: 'Center',
             icon: 'success',
-            title: 'Gracias por confiar en nosotros  :)',
+            title: 'Gracias por confiar en nosotros :)',
             showConfirmButton: false,
             timer: 2500,
         })
-
-
-        Carro = [];
+        carrito = []
+        acumulador=0;
         pintarCarrito();
-        
+        carritoCounter();
     })
     
     
+    
+
+
 };
+
+
+
+
+
 
 
 verCarrito.addEventListener("click", pintarCarrito)
 
-const eliminarProducto = () =>{
-    const foundId = Carro.find((element) => element.id)
 
-    Carro = Carro.filter((cartId)=>{
-        return cartId !== foundId;
-    })
-    carritoCounter();
-    pintarCarrito();
-    modalCont.focus();
-}
 
-const carritoCounter = () => {
-    cantCart.style.display= "block"
-    cantCart.innerText = Carro.length
-}
+

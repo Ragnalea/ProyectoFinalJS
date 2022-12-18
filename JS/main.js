@@ -4,15 +4,25 @@ const modalCont = document.getElementById("modelCart");
 const cantidadCarrito = document.getElementById("cantCart")
 const barra = document.getElementById("busqueda")
 
+let acumulador = 0;
+
 if (localStorage.getItem("carrito")){
-    Carro = JSON.parse(localStorage.getItem("carrito"));
+    carrito = JSON.parse(localStorage.getItem("carrito"));
+    carrito.forEach((el)=>{
+        acumulador = acumulador + el.cant
+        cantCart.innerText = acumulador
+    })
+    
 }else{
-    Carro = [];
+    carrito = [];
+    cantCart.innerText = acumulador
 }
 
+let Carro = [];
 
 
-
+cantCart.style.display= "block"
+cantCart.innerText = acumulador
 
 
 fetch('../Json/productos.json')
@@ -36,27 +46,52 @@ fetch('../Json/productos.json')
     
     producto.append(btnBuy);
 
-        btnBuy.addEventListener("click",() => {
+    btnBuy.addEventListener("click",() => {
+        
+        acumulador += 1 
+        
+        const repeat = carrito.some((repeatProduct)=> repeatProduct.id === el.id)
 
 
-            const repeat = Carro.some((repeatProduct)=> repeatProduct.id === el.id)
-            if (repeat) {
-                Carro.map((produc)=>{
-                    if (produc.id === el.id) {
-                        produc.cant++;
-                    }
+
+        if (repeat) {
+            Carro.map((produc)=>{
+                if (produc.id === el.id) {
+                    produc.cant++;
+
+                let producto= {id : el.id, img: el.img, nombre: el.nombre, precio: el.precio, cant: produc.cant}
+
+                const findId = carrito.find((prod)=>{
+                    return prod.id === el.id
                 })
-            }else{
 
-            Carro.push({
-                id : el.id,
-                img: el.img,
-                nombre: el.nombre,
-                precio: el.precio,
-                cant: el.cant,
-            })}
+                carrito = carrito.filter((cartId)=>{
+                    return cartId !== findId;
+                })
+
+                carrito.push(producto)
+                localStorage.setItem('carrito',JSON.stringify(carrito))
+
             carritoCounter();
+        }
+    
+    })
+        }else{
+            let producto= {id : el.id, img: el.img, nombre: el.nombre, precio: el.precio, cant: el.cant}
+        Carro.push({
+            id : el.id,
+            img: el.img,
+            nombre: el.nombre,
+            precio: el.precio,
+            cant: el.cant,
         })
+        carrito.push(producto)
+        localStorage.setItem('carrito',JSON.stringify(carrito))
+        }
+        carritoCounter();
+
+
+    })
 
 
 
