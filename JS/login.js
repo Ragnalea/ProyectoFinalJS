@@ -6,7 +6,11 @@ const mje = document.getElementById("Advertencia")
 
 
 
-let Usuario = JSON.parse(localStorage.getItem("usuario"));
+if (localStorage.getItem("usuario")){
+    Usuario = JSON.parse(localStorage.getItem("usuario"));
+}else{
+    Usuario = [];
+}
 let Sesion = [];
 
 
@@ -18,20 +22,19 @@ registro.addEventListener("click",(e) =>{
 function mensajeError(){
     mje.innerText="Los datos son incorrectos";
 }
-
+function mensajeErrorReg(){
+    mje.innerText="Debe registrarse para ingresar";
+}
 
 
 init.addEventListener("click", (e)=>{
-
     const mailIndividuo = Usuario.find((usuario)=>{
         return usuario.Correo == cuenta.value})
 
     const nickIndividuo = Usuario.find((usuario)=>{
         return usuario.Nick == cuenta.value})
 
-
-
-    if (mailIndividuo){ 
+        if (mailIndividuo){ 
         let L = Usuario.indexOf(mailIndividuo);
         if (Usuario[L].Correo == cuenta.value && Usuario[L].Contraseña == pass.value) 
         {
