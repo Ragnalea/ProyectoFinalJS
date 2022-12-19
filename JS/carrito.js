@@ -3,9 +3,8 @@
 
     cantCart.innerText = acumulador
     };
-
-
-const pintarCarrito =() => {
+    
+    const pintarCarrito =() => {
 
 
     modalCont.innerHTML="";
@@ -73,6 +72,13 @@ const pintarCarrito =() => {
     modalCont.append(btnBuy)
 
     btnBuy.addEventListener("click", () =>{
+        if (carrito = []){
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Carrito vacio!'
+            })
+        }else{
         Swal.fire({
             position: 'Center',
             icon: 'success',
@@ -80,16 +86,18 @@ const pintarCarrito =() => {
             showConfirmButton: false,
             timer: 2500,
         })
-        carrito = []
+        
         acumulador=0;
+        carrito = [];
+        localStorage.setItem('carrito',JSON.stringify(carrito))
         pintarCarrito();
         carritoCounter();
-    })
+    }})
     
     
     
 
-
+    console.log(carrito)
 };
 
 
